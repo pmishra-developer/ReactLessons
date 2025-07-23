@@ -1,4 +1,8 @@
 import Image from "next/image";
+import Welcome from "./Welcome";
+import StateManagement from "./statemanegment";
+import StateManagement1 from "./statemanagepart1";
+import Plusminus from "./plusminus";
 
 export default function Home() {
   return (
@@ -23,7 +27,15 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
           </li>
-        </ol>
+        </ol>        
+         <Welcome name="Ankit Gandhi"/> 
+         <StateManagement /> 
+         <br />
+         <br />
+         <StateManagement1 />
+          <br />
+          <br />
+        <Plusminus />
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
@@ -58,6 +70,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
+         
           <Image
             aria-hidden
             src="/file.svg"
