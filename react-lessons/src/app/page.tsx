@@ -1,5 +1,6 @@
 import Welcome from "./Components/Welcome";
 import WithParams from "./Components/WithParams";
+import StateManagement from "./Components/StateManagement";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       Hi, Sheron!
       <Welcome/>
       <WithParams name="SHERON" city="Puducherry" />
+      <StateManagement />
     </div>
   );
 }
