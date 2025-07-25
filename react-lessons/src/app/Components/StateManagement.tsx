@@ -34,6 +34,7 @@ function StateManagement(){
 
         <br></br>
         <br></br>
+        <br></br>
 
         <div>
         {loggedin ? (
@@ -50,12 +51,15 @@ function StateManagement(){
         </div>
 
         <br></br>
+        <br></br>
         
         <div>The changed name is {name}</div>
+        <button onClick={() => ChangeName()}>"Change Name"</button>
+
         <br></br>
-        <button onClick={() => ChangeName()}>ButtonClick="Change Name"</button>
         <br></br>
         <br></br>
+
         <div>You have clicked {count} times</div>
         <br></br>
         <button onClick={() => Display(true)}>"Plus"</button>

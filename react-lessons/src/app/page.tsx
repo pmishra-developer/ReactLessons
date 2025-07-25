@@ -1,6 +1,7 @@
 import Welcome from "./Components/Welcome";
 import WithParams from "./Components/WithParams";
 import StateManagement from "./Components/StateManagement";
+import DisplayText from "./Components/SMDisplayText";
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <Welcome/>
       <WithParams name="SHERON" city="Puducherry" />
       <StateManagement />
+      <DisplayText/>
     </div>
   );
 }
