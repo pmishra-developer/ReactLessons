@@ -7,16 +7,28 @@ function StateManagement(){
     const [name, setName] = useState("Editor");
     const [show, setShow] = useState(false);
     const [add, setAdd] = useState(0);
+    const [hide, setHide] = useState(false);
     
-
+    // Change Name logic function
     function ChangeName() {
         if (name === "Editor") { setName("Daksh"); }
         else { setName("Editor"); }
     }
 
+    // Hide and Show logic function
+    function HideShow() {
+        if (hide) {
+            setHide(false);
+        } else {
+            setHide(true);
+        }
+    }
+
+    // return of StateManagement component
     return (
         <div>
 
+            {/* Change name button  */}
             <button onClick={() => ChangeName()}
             style={{
                 backgroundColor: "silver",
@@ -27,19 +39,37 @@ function StateManagement(){
                 fontFamily: "Arial, sans-serif"
             }}> <strong>Change Name</strong>
             </button>
+
             <br></br>
             <br></br>
-            <button onClick={() => setShow(!show)}
-            style={{
-                backgroundColor: "orange",
-                color: "white",
-                padding: "6px",
-                borderRadius: "5px",
-                fontWeight: "bold",
-                fontFamily: "Arial, sans-serif"
-            }}> Show </button>
+            
+            {/* Hide and Show button */}
+            {
+                hide ? 
+                <div><button onClick={() => { setShow(!show); HideShow(); }}
+                style={{
+                    backgroundColor: "orange",
+                    color: "white",
+                    padding: "6px",
+                    borderRadius: "5px",
+                    fontWeight: "bold",
+                    fontFamily: "Arial, sans-serif"
+                }} > Hide </button> 
+                </div>
+                : <div><button onClick={() => {setShow(!show); HideShow(); }}   
+                style={{
+                    backgroundColor: "orange",
+                    color: "white",
+                    padding: "6px",
+                    borderRadius: "5px",
+                    fontWeight: "bold",
+                    fontFamily: "Arial, sans-serif"
+                }}> Show </button></div>
+            } 
+
             <br></br>
-            <br></br>
+
+             {/* Show and Hide Content */}
             { show && (
             <h1 style={{
                 color: "blue",
@@ -52,6 +82,7 @@ function StateManagement(){
             </h1>    
             )}
             
+             {/* Increment button */}
             <button onClick={() => setAdd(add + 1)} style={{
                 backgroundColor: "silver",
                 color: "red",
@@ -60,8 +91,11 @@ function StateManagement(){
                 fontWeight: "bold",
                 fontFamily: "Arial, sans-serif"
             }}> <strong>ADD</strong> </button>
+
             <br></br>
             <br></br>
+            
+             {/* Reset button */}
             <button onClick={() => setAdd(0)} style={{
                 backgroundColor: "silver",
                 color: "red",
@@ -70,8 +104,11 @@ function StateManagement(){
                 fontWeight: "bold",
                 fontFamily: "Arial, sans-serif"
             }}> <strong>RESET</strong> </button>
+            
             <br></br>
             <br></br>
+            
+            {/* // Decrement button */}
             <button onClick={() => setAdd(add - 1)}style={{
                 backgroundColor: "silver",
                 color: "red",
@@ -80,8 +117,11 @@ function StateManagement(){
                 fontWeight: "bold",
                 fontFamily: "Arial, sans-serif"
             }}> <strong>SUB</strong> </button>
+            
             <br></br>
             <br></br>
+            
+            {/* // Display count */}
             <div style={{
                 backgroundColor: "orange",
                 width: "fit-content",
@@ -94,6 +134,7 @@ function StateManagement(){
             }}>
                 Count is {add}
             </div>
+            
         </div>
     );
 }
