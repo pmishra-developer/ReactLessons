@@ -6,6 +6,7 @@ import WithParam from "./Components/Test-basics/WithParam";
 import Welcome from "./Components/Test-basics/Welcome";
 import StateManagement from "./Components/Hooks/StateManagement";
 import LogInLogOut from "./Components/LogInLogout";
+import ReadValue from "./Components/Hooks/ReadValueFromTestBox";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Welcome name="Vivek" /><br />
       <StateManagement /> <br />
       <LogInLogOut />
+      <ReadValue />
     </div>
   );
 }
