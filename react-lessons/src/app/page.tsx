@@ -1,16 +1,22 @@
 import React from "react";
-import TestTsx from "./Components/testTsx";
-import CaptureValue from "./Components/PassValueFromParentToChild";
-import Hello from "./Components/PublicPrivateComponent";
+import TestTsx from "./Components/Test-basics/testTsx";
+import CaptureValue from "./Components/Test-basics/PassValueFromParentToChild";
+import Hello from "./Components/Test-basics/PublicPrivateComponent";
+import WithParam from "./Components/Test-basics/WithParam";
+import Welcome from "./Components/Test-basics/Welcome";
+import StateManagement from "./Components/Hooks/StateManagement";
+import LogInLogOut from "./Components/LogInLogout";
 
 export default function Home() {
   return (
     <div>
-      <TestTsx/>
-      <hr/>
-      <CaptureValue newValue={1234}/>
-      <hr/>
-      <Hello/>
+      <TestTsx /><br />
+      <CaptureValue newValue={1234} /><br />
+      <Hello /><br />
+      <WithParam id={1} name="Vivek" /><br />
+      <Welcome name="Vivek" /><br />
+      <StateManagement /> <br />
+      <LogInLogOut />
     </div>
   );
 }
