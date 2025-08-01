@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Welcome from "./Test-basics/Welcome";
+import Welcome from "../Session-1/Welcome";
 
 function LogInLogOut() {
     const [LogInVivek, setLogInVivek] = useState(false);

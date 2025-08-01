@@ -5,7 +5,7 @@ import Hello from "./Components/Test-basics/PublicPrivateComponent";
 import WithParam from "./Components/Test-basics/WithParam";
 import Welcome from "./Components/Test-basics/Welcome";
 import StateManagement from "./Components/Hooks/StateManagement";
-import LogInLogOut from "./Components/LogInLogout";
+import LogInLogOut from "./Components/Session-2/LogInLogout";
 import ReadValue from "./Components/Hooks/ReadValueFromTestBox";
 
 export default function Home() {
