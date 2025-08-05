@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import CheckBox from "./CheckBox";
 import { useState } from "react";
 
 
@@ -8,6 +9,7 @@ function StateManagement(){
     const [show, setShow] = useState(false);
     const [add, setAdd] = useState(0);
     const [hide, setHide] = useState(false);
+    const [addCheckBox, setAddCheckBox] = useState(false);
     
     // Change Name logic function
     function ChangeName() {
