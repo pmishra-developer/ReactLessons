@@ -1,12 +1,13 @@
+"use client";
 import React, { useState } from 'react';
 
 function InputTextBoxValue() {
-  const [name, setname] = useState('sdsd');
+  const [name, setname] = useState('ggg');
 
   return (
     <div>
       <label htmlFor="nameInput">Name:</label>
-      <input
+      <input readOnly
         type="text"
         id="nameInput"
         value={name}
