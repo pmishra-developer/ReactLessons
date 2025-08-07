@@ -2,6 +2,7 @@ import Welcome from "./Components/Welcome";
 import WithParams from "./Components/WithParams";
 import StateManagement from "./Components/StateManagement";
 import DisplayText from "./Components/SMDisplayText";
+import Checkbox from "./Components/Checkbox";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
       <WithParams name="SHERON" city="Puducherry" />
       <StateManagement />
       <DisplayText/>
+      <Checkbox />
+
     </div>
   );
 }
